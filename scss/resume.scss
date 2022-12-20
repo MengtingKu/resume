@@ -1,0 +1,48 @@
+img {
+    max-width: 100%;
+    // display: block;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.experience,
+.education {
+    .timeline {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 1%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            transform: translateX(-50%);
+            background-color: grey;
+        }
+
+        .timeline-pointer {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: -2.2%;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: 1px solid gray;
+                transform: translateX(-50%);
+                background-color: #fff;
+                z-index: 1;
+            }
+        }
+    }
+}
